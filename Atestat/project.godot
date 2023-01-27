@@ -35,6 +35,10 @@ Attack={
  ]
 }
 
+[mono]
+
+project/assembly_name="CookieVenture"
+
 [physics]
 
 common/enable_pause_aware_picking=true

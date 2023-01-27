@@ -1,4 +1,4 @@
-extends StaticBody2D
+extends Position2D
 
 var Health = 100
 var screen_size
