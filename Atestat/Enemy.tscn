@@ -1,6 +1,7 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=15 format=2]
 
-[ext_resource path="res://Skeleton Idle.png" type="Texture" id=1]
+[ext_resource path="res://Player_sprites/Skeleton Idle.png" type="Texture" id=1]
+[ext_resource path="res://Enemy.gd" type="Script" id=2]
 
 [sub_resource type="AtlasTexture" id=2]
 atlas = ExtResource( 1 )
@@ -55,10 +56,11 @@ animations = [ {
 } ]
 
 [node name="Enemy" type="Position2D"]
+script = ExtResource( 2 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
-position = Vector2( 67.4999, 80.5 )
-scale = Vector2( 5.54166, 5.09375 )
+position = Vector2( 50, 63 )
+scale = Vector2( 4.08333, 4 )
 frames = SubResource( 13 )
 animation = "Idle_skeleton"
 frame = 1
