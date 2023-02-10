@@ -10,4 +10,4 @@ func _process(delta):
 
 func _on_Enemy_death():
 	cookies += 1
-	$GUI/HBoxContainer/Bars/Bar/Count/Numbers.text = str(cookies)
+	$GUI/HBoxContainer/Bars/Bar/Count/Numbers.text = str(cookies) + ' '

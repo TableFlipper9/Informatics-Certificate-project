@@ -2,7 +2,7 @@ extends Position2D
 
 var Health = 100
 var screen_size
-var dmg = 10;
+var dmg = 50;
 signal attacked(dmg)
 
 func _ready():
