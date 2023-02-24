@@ -396,7 +396,6 @@ position = Vector2( 82.0002, 138 )
 scale = Vector2( 3.8125, 3.64063 )
 frames = SubResource( 16 )
 animation = "Idle_player"
-frame = 12
 playing = true
 
 [connection signal="animation_finished" from="AnimatedSprite" to="." method="_on_AnimatedSprite_animation_finished"]

@@ -2,14 +2,13 @@ extends Position2D
 
 var Health = 100
 var dmg = 30;
-var dead = 0 
 signal attacked(dmg)
 
 func _ready():
 	pass
 
 func _on_AnimatedSprite_animation_finished():
-	if dead==1:
+	if $AnimatedSprite.animation == ("Walk_player"):
 		$AnimatedSprite.play("Walk_player")
 	else:
 		$AnimatedSprite.play("Idle_player")
@@ -21,7 +20,6 @@ func _process(_delta):
 
 func _on_Enemy_death():
 	$AnimatedSprite.play("Walk_player")
-	dead=1
 
 func _on_Enemy_respawn():
-	dead=0
+	$AnimatedSprite.play("Idle_player")

@@ -1,30 +1,46 @@
 extends Position2D
 
 var health = 100
-var move = 0
-var dead = 0
+var move = false
+var dead = false
+var X = 1
+onready var enemy_position = position.x
 signal death 
 signal respawn
  
 func _ready():
-	dead = 0 
+	dead = false
+
+func new_enemy():
+	X = X + 2
+	health = 100 + X*X
 
 func respawn():
-	pass
+	new_enemy()
+	$Health/VBoxContainer/HBoxContainer/Label.text = str(health)
+	position.x = enemy_position + 300
+	$AnimatedSprite.play("Walk_skeleton") 
 
-func _process(delta):
-	if move > 0 :
-		position.x -= 100 * delta * 2
-		move -= 1
-		if move == 0:
+func die():
+	emit_signal("death")
+	move = true
+	dead = false
+
+func _process(_delta):
+	if move == true:
+		position.x -= 3 
+		if position.x < 0:
 			respawn()
-			emit_signal("respawn")
+		if position.x == enemy_position:
+				emit_signal("respawn")
+				$AnimatedSprite.play("Idle_skeleton")
+				move = false
 
 func _on_AnimatedSprite_animation_finished():
-	if  dead == 1:
-		emit_signal("death")
-		move=150
-		dead=0
+	if $AnimatedSprite.animation == "Walk_skeleton":
+		$AnimatedSprite.play("Walk_skeleton")
+	if  dead == true:
+		die()
 		$AnimatedSprite.play("Dead_skeleton")
 	elif health == 0:
 		$AnimatedSprite.play("Dead_skeleton")
@@ -37,7 +53,8 @@ func _on_Player_attacked(dmg):
 		health = 0
 	if health == 0:
 		$AnimatedSprite.play("Death_skeleton")
-		dead = 1
-	else :
+		dead = true
+	else:
 		$AnimatedSprite.play("Hit_skeleton")
 	$Health/VBoxContainer/HBoxContainer/Label.text = str(health)
+	$Health/ProgressBar.value = lerp($Health/ProgressBar.value, int ((health/5)*100),0.1)
