@@ -1,0 +1,43 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://World.gd" type="Script" id=2]
+[ext_resource path="res://Enemy.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scrollbar.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Counter.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Env.tscn" type="PackedScene" id=6]
+
+[node name="World" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="BackGround" parent="." instance=ExtResource( 6 )]
+
+[node name="Player" parent="." instance=ExtResource( 1 )]
+position = Vector2( 152, 340 )
+
+[node name="Enemy" parent="." instance=ExtResource( 3 )]
+position = Vector2( 441, 365 )
+
+[node name="GUI" parent="." instance=ExtResource( 5 )]
+margin_top = 39.0
+margin_right = 150.0
+margin_bottom = 83.0
+
+[node name="Panel" type="Panel" parent="."]
+margin_left = 602.0
+margin_right = 1025.0
+margin_bottom = 599.0
+
+[node name="Scroll" parent="." instance=ExtResource( 4 )]
+margin_left = 610.0
+margin_top = 140.0
+margin_right = 1045.0
+margin_bottom = 413.0
+rect_scale = Vector2( 0.937516, 1 )
+
+[connection signal="attacked" from="Player" to="Enemy" method="_on_Player_attacked"]
+[connection signal="death" from="Enemy" to="." method="_on_Enemy_death"]
+[connection signal="death" from="Enemy" to="BackGround" method="_on_Enemy_death"]
+[connection signal="death" from="Enemy" to="Player" method="_on_Enemy_death"]
+[connection signal="respawn" from="Enemy" to="BackGround" method="_on_Enemy_respawn"]
+[connection signal="respawn" from="Enemy" to="Player" method="_on_Enemy_respawn"]
