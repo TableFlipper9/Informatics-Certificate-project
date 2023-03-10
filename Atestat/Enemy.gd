@@ -6,7 +6,7 @@ onready var enemy_position = position.x
 signal death 
 signal respawn
 
-var types = ["ghost", "demon","lord"]
+var types = ["ghost", "demon"]
 var weakness =["fire", "poison", "magic"]
 
 class Enemy:
@@ -25,11 +25,11 @@ func _ready():
 
 func new_enemy():
 	rng.randomize()
-	enemy.type = types[rng.randi_range(0,2)]
+	enemy.type = types[rng.randi_range(0,1)]
 	rng.randomize()
 	enemy.weakness = weakness[rng.randi_range(0,2)]
 	X = X + 2
-	enemy.health = 100 + X * 1.42
+	enemy.health = floor(100 + X * 1.42)
 	$Health/VBoxContainer/ProgressBar.max_value = enemy.health
 
 func respawn():

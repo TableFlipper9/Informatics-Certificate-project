@@ -10,6 +10,10 @@
 [node name="World" type="Node2D"]
 script = ExtResource( 2 )
 
+[node name="Cookie_timer" type="Timer" parent="."]
+wait_time = 2.0
+autostart = true
+
 [node name="BackGround" parent="." instance=ExtResource( 6 )]
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
@@ -34,7 +38,10 @@ margin_top = 140.0
 margin_right = 1045.0
 margin_bottom = 413.0
 rect_scale = Vector2( 0.937516, 1 )
+buttons = 6
 
+[connection signal="next_building" from="." to="Scroll" method="_on_World_next_building"]
+[connection signal="timeout" from="Cookie_timer" to="." method="_on_Cookie_timer_timeout"]
 [connection signal="attacked" from="Player" to="Enemy" method="_on_Player_attacked"]
 [connection signal="death" from="Enemy" to="." method="_on_Enemy_death"]
 [connection signal="death" from="Enemy" to="BackGround" method="_on_Enemy_death"]

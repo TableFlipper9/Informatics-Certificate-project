@@ -1,4 +1,4 @@
-[gd_scene load_steps=99 format=2]
+[gd_scene load_steps=110 format=2]
 
 [ext_resource path="res://Player_sprites/ghost-vanish.png" type="Texture" id=1]
 [ext_resource path="res://Enemy.gd" type="Script" id=2]
@@ -7,10 +7,11 @@
 [ext_resource path="res://Player_sprites/ghost-appears.png" type="Texture" id=5]
 [ext_resource path="res://Player_sprites/ghost-idle.png" type="Texture" id=6]
 [ext_resource path="res://Player_sprites/hell-beast-burn.png" type="Texture" id=7]
-[ext_resource path="res://Player_sprites/demon-idle.png" type="Texture" id=8]
-[ext_resource path="res://Player_sprites/demon-attack-no-breath.png" type="Texture" id=9]
+[ext_resource path="res://Player_sprites/hell-hound-jump.png" type="Texture" id=8]
+[ext_resource path="res://Player_sprites/hell-hound-idle.png" type="Texture" id=9]
 [ext_resource path="res://Player_sprites/3_bluefire_spritesheet.png" type="Texture" id=10]
 [ext_resource path="res://Player_sprites/13_vortex_spritesheet.png" type="Texture" id=11]
+[ext_resource path="res://Player_sprites/hell-hound-walk.png" type="Texture" id=12]
 
 [sub_resource type="AtlasTexture" id=181]
 atlas = ExtResource( 11 )
@@ -56,37 +57,37 @@ region = Rect2( 320, 0, 64, 64 )
 atlas = ExtResource( 1 )
 region = Rect2( 384, 0, 64, 64 )
 
-[sub_resource type="AtlasTexture" id=155]
+[sub_resource type="AtlasTexture" id=189]
 atlas = ExtResource( 10 )
-region = Rect2( 0, 26, 100, 91 )
+region = Rect2( 0, 0, 100, 100 )
 
-[sub_resource type="AtlasTexture" id=156]
+[sub_resource type="AtlasTexture" id=190]
 atlas = ExtResource( 10 )
-region = Rect2( 100, 26, 100, 91 )
+region = Rect2( 100, 0, 100, 100 )
 
-[sub_resource type="AtlasTexture" id=157]
+[sub_resource type="AtlasTexture" id=191]
 atlas = ExtResource( 10 )
-region = Rect2( 200, 26, 100, 91 )
+region = Rect2( 200, 0, 100, 100 )
 
-[sub_resource type="AtlasTexture" id=158]
+[sub_resource type="AtlasTexture" id=192]
 atlas = ExtResource( 10 )
-region = Rect2( 300, 26, 100, 91 )
+region = Rect2( 300, 0, 100, 100 )
 
-[sub_resource type="AtlasTexture" id=159]
+[sub_resource type="AtlasTexture" id=193]
 atlas = ExtResource( 10 )
-region = Rect2( 400, 26, 100, 91 )
+region = Rect2( 400, 0, 100, 100 )
 
-[sub_resource type="AtlasTexture" id=160]
+[sub_resource type="AtlasTexture" id=194]
 atlas = ExtResource( 10 )
-region = Rect2( 500, 26, 100, 91 )
+region = Rect2( 500, 0, 100, 100 )
 
-[sub_resource type="AtlasTexture" id=161]
+[sub_resource type="AtlasTexture" id=195]
 atlas = ExtResource( 10 )
-region = Rect2( 600, 26, 100, 91 )
+region = Rect2( 600, 0, 100, 100 )
 
-[sub_resource type="AtlasTexture" id=162]
+[sub_resource type="AtlasTexture" id=196]
 atlas = ExtResource( 10 )
-region = Rect2( 700, 26, 100, 91 )
+region = Rect2( 700, 0, 100, 100 )
 
 [sub_resource type="AtlasTexture" id=90]
 atlas = ExtResource( 7 )
@@ -140,21 +141,29 @@ region = Rect2( 320, 0, 64, 64 )
 atlas = ExtResource( 1 )
 region = Rect2( 384, 0, 64, 64 )
 
-[sub_resource type="AtlasTexture" id=163]
-atlas = ExtResource( 9 )
-region = Rect2( 0, 14, 192, 160 )
+[sub_resource type="AtlasTexture" id=197]
+atlas = ExtResource( 8 )
+region = Rect2( 0, 0, 65, 48 )
 
-[sub_resource type="AtlasTexture" id=164]
-atlas = ExtResource( 9 )
-region = Rect2( 192, 14, 192, 160 )
+[sub_resource type="AtlasTexture" id=198]
+atlas = ExtResource( 8 )
+region = Rect2( 65, 0, 65, 48 )
 
-[sub_resource type="AtlasTexture" id=165]
-atlas = ExtResource( 9 )
-region = Rect2( 384, 14, 192, 160 )
+[sub_resource type="AtlasTexture" id=199]
+atlas = ExtResource( 8 )
+region = Rect2( 130, 0, 65, 48 )
 
-[sub_resource type="AtlasTexture" id=166]
-atlas = ExtResource( 9 )
-region = Rect2( 576, 14, 192, 160 )
+[sub_resource type="AtlasTexture" id=200]
+atlas = ExtResource( 8 )
+region = Rect2( 195, 0, 65, 48 )
+
+[sub_resource type="AtlasTexture" id=201]
+atlas = ExtResource( 8 )
+region = Rect2( 260, 0, 65, 48 )
+
+[sub_resource type="AtlasTexture" id=202]
+atlas = ExtResource( 8 )
+region = Rect2( 325, 0, 65, 48 )
 
 [sub_resource type="StreamTexture" id=82]
 load_path = "res://.import/hell-beast-breath.png-5d0eb58b26b9c6738a90fdbbf5314ad4.stex"
@@ -199,37 +208,29 @@ region = Rect2( 64, 0, 64, 80 )
 atlas = ExtResource( 4 )
 region = Rect2( 0, 0, 64, 80 )
 
-[sub_resource type="AtlasTexture" id=167]
-atlas = ExtResource( 9 )
-region = Rect2( 0, 14, 192, 160 )
+[sub_resource type="AtlasTexture" id=203]
+atlas = ExtResource( 8 )
+region = Rect2( 0, 0, 65, 48 )
 
-[sub_resource type="AtlasTexture" id=168]
-atlas = ExtResource( 9 )
-region = Rect2( 192, 14, 192, 160 )
+[sub_resource type="AtlasTexture" id=204]
+atlas = ExtResource( 8 )
+region = Rect2( 65, 0, 65, 48 )
 
-[sub_resource type="AtlasTexture" id=169]
-atlas = ExtResource( 9 )
-region = Rect2( 384, 14, 192, 160 )
+[sub_resource type="AtlasTexture" id=205]
+atlas = ExtResource( 8 )
+region = Rect2( 130, 0, 65, 48 )
 
-[sub_resource type="AtlasTexture" id=170]
-atlas = ExtResource( 9 )
-region = Rect2( 576, 14, 192, 160 )
+[sub_resource type="AtlasTexture" id=206]
+atlas = ExtResource( 8 )
+region = Rect2( 195, 0, 65, 48 )
 
-[sub_resource type="AtlasTexture" id=171]
-atlas = ExtResource( 9 )
-region = Rect2( 768, 14, 192, 160 )
+[sub_resource type="AtlasTexture" id=207]
+atlas = ExtResource( 8 )
+region = Rect2( 260, 0, 65, 48 )
 
-[sub_resource type="AtlasTexture" id=172]
-atlas = ExtResource( 9 )
-region = Rect2( 960, 14, 192, 160 )
-
-[sub_resource type="AtlasTexture" id=173]
-atlas = ExtResource( 9 )
-region = Rect2( 1152, 14, 192, 160 )
-
-[sub_resource type="AtlasTexture" id=174]
-atlas = ExtResource( 9 )
-region = Rect2( 1344, 14, 192, 160 )
+[sub_resource type="AtlasTexture" id=208]
+atlas = ExtResource( 8 )
+region = Rect2( 325, 0, 65, 48 )
 
 [sub_resource type="StreamTexture" id=83]
 load_path = "res://.import/hell-beast-idle.png-0417da9fc22d3e32414c9948370fc56a.stex"
@@ -286,29 +287,29 @@ region = Rect2( 320, 0, 64, 67 )
 atlas = ExtResource( 6 )
 region = Rect2( 384, 0, 64, 67 )
 
-[sub_resource type="AtlasTexture" id=175]
-atlas = ExtResource( 8 )
-region = Rect2( 0, 0, 160, 144 )
+[sub_resource type="AtlasTexture" id=209]
+atlas = ExtResource( 9 )
+region = Rect2( 0, 0, 64, 32 )
 
-[sub_resource type="AtlasTexture" id=176]
-atlas = ExtResource( 8 )
-region = Rect2( 160, 0, 160, 144 )
+[sub_resource type="AtlasTexture" id=210]
+atlas = ExtResource( 9 )
+region = Rect2( 64, 0, 64, 32 )
 
-[sub_resource type="AtlasTexture" id=177]
-atlas = ExtResource( 8 )
-region = Rect2( 320, 0, 160, 144 )
+[sub_resource type="AtlasTexture" id=211]
+atlas = ExtResource( 9 )
+region = Rect2( 128, 0, 64, 32 )
 
-[sub_resource type="AtlasTexture" id=178]
-atlas = ExtResource( 8 )
-region = Rect2( 480, 0, 160, 144 )
+[sub_resource type="AtlasTexture" id=212]
+atlas = ExtResource( 9 )
+region = Rect2( 192, 0, 64, 32 )
 
-[sub_resource type="AtlasTexture" id=179]
-atlas = ExtResource( 8 )
-region = Rect2( 640, 0, 160, 144 )
+[sub_resource type="AtlasTexture" id=213]
+atlas = ExtResource( 9 )
+region = Rect2( 256, 0, 64, 32 )
 
-[sub_resource type="AtlasTexture" id=180]
-atlas = ExtResource( 8 )
-region = Rect2( 800, 0, 160, 144 )
+[sub_resource type="AtlasTexture" id=214]
+atlas = ExtResource( 9 )
+region = Rect2( 320, 0, 64, 32 )
 
 [sub_resource type="AtlasTexture" id=78]
 atlas = SubResource( 83 )
@@ -346,13 +347,53 @@ region = Rect2( 256, 0, 64, 48 )
 atlas = ExtResource( 5 )
 region = Rect2( 320, 0, 64, 48 )
 
-[sub_resource type="AtlasTexture" id=153]
-atlas = ExtResource( 8 )
-region = Rect2( 640, 0, 160, 144 )
+[sub_resource type="AtlasTexture" id=215]
+atlas = ExtResource( 12 )
+region = Rect2( 0, 0, 64, 32 )
 
-[sub_resource type="AtlasTexture" id=154]
-atlas = ExtResource( 8 )
-region = Rect2( 800, 0, 160, 144 )
+[sub_resource type="AtlasTexture" id=216]
+atlas = ExtResource( 12 )
+region = Rect2( 64, 0, 64, 32 )
+
+[sub_resource type="AtlasTexture" id=217]
+atlas = ExtResource( 12 )
+region = Rect2( 128, 0, 64, 32 )
+
+[sub_resource type="AtlasTexture" id=218]
+atlas = ExtResource( 12 )
+region = Rect2( 192, 0, 64, 32 )
+
+[sub_resource type="AtlasTexture" id=219]
+atlas = ExtResource( 12 )
+region = Rect2( 256, 0, 64, 32 )
+
+[sub_resource type="AtlasTexture" id=220]
+atlas = ExtResource( 12 )
+region = Rect2( 320, 0, 64, 32 )
+
+[sub_resource type="AtlasTexture" id=221]
+atlas = ExtResource( 12 )
+region = Rect2( 384, 0, 64, 32 )
+
+[sub_resource type="AtlasTexture" id=222]
+atlas = ExtResource( 12 )
+region = Rect2( 448, 0, 64, 32 )
+
+[sub_resource type="AtlasTexture" id=223]
+atlas = ExtResource( 12 )
+region = Rect2( 512, 0, 64, 32 )
+
+[sub_resource type="AtlasTexture" id=224]
+atlas = ExtResource( 12 )
+region = Rect2( 576, 0, 64, 32 )
+
+[sub_resource type="AtlasTexture" id=225]
+atlas = ExtResource( 12 )
+region = Rect2( 640, 0, 64, 32 )
+
+[sub_resource type="AtlasTexture" id=226]
+atlas = ExtResource( 12 )
+region = Rect2( 704, 0, 64, 32 )
 
 [sub_resource type="SpriteFrames" id=13]
 animations = [ {
@@ -366,12 +407,12 @@ animations = [ {
 "name": "Dead_ghost",
 "speed": 5.0
 }, {
-"frames": [ SubResource( 155 ), SubResource( 156 ), SubResource( 157 ), SubResource( 158 ), SubResource( 159 ), SubResource( 160 ), SubResource( 161 ), SubResource( 162 ) ],
+"frames": [ SubResource( 189 ), SubResource( 190 ), SubResource( 191 ), SubResource( 192 ), SubResource( 193 ), SubResource( 194 ), SubResource( 195 ), SubResource( 196 ) ],
 "loop": true,
-"name": "Dead_lord",
+"name": "Dead_hound",
 "speed": 5.0
 }, {
-"frames": [ SubResource( 90 ), SubResource( 91 ), SubResource( 92 ), SubResource( 93 ), SubResource( 94 ), SubResource( 95 ) ],
+"frames": [ SubResource( 90 ), SubResource( 91 ), SubResource( 92 ), SubResource( 91 ), SubResource( 92 ), SubResource( 93 ), SubResource( 94 ), SubResource( 95 ) ],
 "loop": true,
 "name": "Death_demon",
 "speed": 10.0
@@ -381,9 +422,9 @@ animations = [ {
 "name": "Death_ghost",
 "speed": 15.0
 }, {
-"frames": [ SubResource( 163 ), SubResource( 164 ), SubResource( 165 ), SubResource( 166 ) ],
+"frames": [ SubResource( 197 ), SubResource( 198 ), SubResource( 199 ), SubResource( 200 ), SubResource( 201 ), SubResource( 202 ) ],
 "loop": true,
-"name": "Death_lord",
+"name": "Death_hound",
 "speed": 10.0
 }, {
 "frames": [ SubResource( 68 ), SubResource( 69 ), SubResource( 70 ), SubResource( 71 ) ],
@@ -396,9 +437,9 @@ animations = [ {
 "name": "Hit_ghost",
 "speed": 15.0
 }, {
-"frames": [ SubResource( 167 ), SubResource( 168 ), SubResource( 169 ), SubResource( 170 ), SubResource( 171 ), SubResource( 172 ), SubResource( 173 ), SubResource( 174 ) ],
+"frames": [ SubResource( 203 ), SubResource( 204 ), SubResource( 205 ), SubResource( 206 ), SubResource( 207 ), SubResource( 208 ) ],
 "loop": true,
-"name": "Hit_lord",
+"name": "Hit_hound",
 "speed": 15.0
 }, {
 "frames": [ SubResource( 72 ), SubResource( 73 ), SubResource( 74 ), SubResource( 75 ), SubResource( 76 ), SubResource( 77 ) ],
@@ -411,9 +452,9 @@ animations = [ {
 "name": "Idle_ghost",
 "speed": 10.0
 }, {
-"frames": [ SubResource( 175 ), SubResource( 176 ), SubResource( 177 ), SubResource( 178 ), SubResource( 179 ), SubResource( 180 ) ],
+"frames": [ SubResource( 209 ), SubResource( 210 ), SubResource( 211 ), SubResource( 212 ), SubResource( 213 ), SubResource( 214 ) ],
 "loop": true,
-"name": "Idle_lord",
+"name": "Idle_hound",
 "speed": 10.0
 }, {
 "frames": [ SubResource( 78 ), SubResource( 79 ), SubResource( 80 ) ],
@@ -426,9 +467,9 @@ animations = [ {
 "name": "Walk_ghost",
 "speed": 5.0
 }, {
-"frames": [ SubResource( 153 ), SubResource( 154 ) ],
+"frames": [ SubResource( 215 ), SubResource( 216 ), SubResource( 217 ), SubResource( 218 ), SubResource( 219 ), SubResource( 220 ), SubResource( 221 ), SubResource( 222 ), SubResource( 223 ), SubResource( 224 ), SubResource( 225 ), SubResource( 226 ) ],
 "loop": true,
-"name": "Walk_lord",
+"name": "Walk_hound",
 "speed": 15.0
 } ]
 
@@ -440,7 +481,7 @@ position = Vector2( -70, 108 )
 scale = Vector2( 2.53475, 2.49848 )
 frames = SubResource( 13 )
 animation = "Idle_ghost"
-frame = 1
+frame = 3
 playing = true
 
 [node name="Health" parent="." instance=ExtResource( 3 )]
