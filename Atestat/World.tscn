@@ -38,7 +38,6 @@ margin_top = 140.0
 margin_right = 1045.0
 margin_bottom = 413.0
 rect_scale = Vector2( 0.937516, 1 )
-buttons = 6
 
 [connection signal="next_building" from="." to="Scroll" method="_on_World_next_building"]
 [connection signal="timeout" from="Cookie_timer" to="." method="_on_Cookie_timer_timeout"]

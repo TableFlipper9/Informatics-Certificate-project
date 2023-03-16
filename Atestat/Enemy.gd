@@ -6,7 +6,7 @@ onready var enemy_position = position.x
 signal death 
 signal respawn
 
-var types = ["ghost", "demon"]
+var types = ["ghost", "demon","skeleton"]
 var weakness =["fire", "poison", "magic"]
 
 class Enemy:
@@ -25,7 +25,7 @@ func _ready():
 
 func new_enemy():
 	rng.randomize()
-	enemy.type = types[rng.randi_range(0,1)]
+	enemy.type = types[rng.randi_range(0,2)]
 	rng.randomize()
 	enemy.weakness = weakness[rng.randi_range(0,2)]
 	X = X + 2
