@@ -1,0 +1,15 @@
+[gd_scene format=2]
+
+[node name="Upgrades" type="MarginContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = -845.0
+margin_bottom = -453.0
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_right = 179.0
+margin_bottom = 147.0
+
+[node name="Button" type="Button" parent="."]
+margin_right = 179.0
+margin_bottom = 147.0
