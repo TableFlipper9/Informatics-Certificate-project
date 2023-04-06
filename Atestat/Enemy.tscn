@@ -1,0 +1,1103 @@
+[gd_scene load_steps=168 format=2]
+
+[ext_resource path="res://Player_sprites/ghost-vanish.png" type="Texture" id=1]
+[ext_resource path="res://Enemy.gd" type="Script" id=2]
+[ext_resource path="res://Health_bar.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Player_sprites/ghost-shriek.png" type="Texture" id=4]
+[ext_resource path="res://Player_sprites/ghost-appears.png" type="Texture" id=5]
+[ext_resource path="res://Player_sprites/ghost-idle.png" type="Texture" id=6]
+[ext_resource path="res://Player_sprites/hell-beast-burn.png" type="Texture" id=7]
+[ext_resource path="res://Player_sprites/Idle_skeleton.png" type="Texture" id=8]
+[ext_resource path="res://Player_sprites/Walk_skeleton.png" type="Texture" id=9]
+[ext_resource path="res://Player_sprites/Death-skeleton.png" type="Texture" id=10]
+[ext_resource path="res://Player_sprites/11_fire_spritesheet.png" type="Texture" id=11]
+[ext_resource path="res://Player_sprites/hit_skeleton.png" type="Texture" id=12]
+[ext_resource path="res://Player_sprites/demon-idle.png" type="Texture" id=13]
+[ext_resource path="res://Player_sprites/13_vortex_spritesheet.png" type="Texture" id=14]
+[ext_resource path="res://Player_sprites/demon-attack.png" type="Texture" id=15]
+[ext_resource path="res://Player_sprites/demon-attack-no-breath.png" type="Texture" id=16]
+
+[sub_resource type="AtlasTexture" id=216]
+atlas = ExtResource( 15 )
+region = Rect2( 0, 0, 240, 192 )
+
+[sub_resource type="AtlasTexture" id=217]
+atlas = ExtResource( 15 )
+region = Rect2( 240, 0, 240, 192 )
+
+[sub_resource type="AtlasTexture" id=218]
+atlas = ExtResource( 15 )
+region = Rect2( 480, 0, 240, 192 )
+
+[sub_resource type="AtlasTexture" id=219]
+atlas = ExtResource( 15 )
+region = Rect2( 720, 0, 240, 192 )
+
+[sub_resource type="AtlasTexture" id=220]
+atlas = ExtResource( 15 )
+region = Rect2( 960, 0, 240, 192 )
+
+[sub_resource type="AtlasTexture" id=221]
+atlas = ExtResource( 15 )
+region = Rect2( 1200, 0, 240, 192 )
+
+[sub_resource type="AtlasTexture" id=222]
+atlas = ExtResource( 15 )
+region = Rect2( 1440, 0, 240, 192 )
+
+[sub_resource type="AtlasTexture" id=223]
+atlas = ExtResource( 15 )
+region = Rect2( 1680, 0, 240, 192 )
+
+[sub_resource type="AtlasTexture" id=224]
+atlas = ExtResource( 15 )
+region = Rect2( 1920, 0, 240, 192 )
+
+[sub_resource type="AtlasTexture" id=225]
+atlas = ExtResource( 15 )
+region = Rect2( 2160, 0, 240, 192 )
+
+[sub_resource type="AtlasTexture" id=226]
+atlas = ExtResource( 15 )
+region = Rect2( 2400, 0, 240, 192 )
+
+[sub_resource type="AtlasTexture" id=227]
+atlas = ExtResource( 14 )
+region = Rect2( 0, 0, 100, 100 )
+
+[sub_resource type="AtlasTexture" id=228]
+atlas = ExtResource( 14 )
+region = Rect2( 100, 0, 100, 100 )
+
+[sub_resource type="AtlasTexture" id=229]
+atlas = ExtResource( 14 )
+region = Rect2( 200, 0, 100, 100 )
+
+[sub_resource type="AtlasTexture" id=230]
+atlas = ExtResource( 14 )
+region = Rect2( 300, 0, 100, 100 )
+
+[sub_resource type="AtlasTexture" id=231]
+atlas = ExtResource( 14 )
+region = Rect2( 400, 0, 100, 100 )
+
+[sub_resource type="AtlasTexture" id=232]
+atlas = ExtResource( 14 )
+region = Rect2( 500, 0, 100, 100 )
+
+[sub_resource type="AtlasTexture" id=233]
+atlas = ExtResource( 14 )
+region = Rect2( 600, 0, 100, 100 )
+
+[sub_resource type="AtlasTexture" id=234]
+atlas = ExtResource( 14 )
+region = Rect2( 700, 0, 100, 100 )
+
+[sub_resource type="AtlasTexture" id=235]
+atlas = ExtResource( 14 )
+region = Rect2( 0, 100, 100, 100 )
+
+[sub_resource type="AtlasTexture" id=236]
+atlas = ExtResource( 14 )
+region = Rect2( 100, 100, 100, 100 )
+
+[sub_resource type="AtlasTexture" id=237]
+atlas = ExtResource( 14 )
+region = Rect2( 200, 100, 100, 100 )
+
+[sub_resource type="AtlasTexture" id=238]
+atlas = ExtResource( 14 )
+region = Rect2( 300, 100, 100, 100 )
+
+[sub_resource type="AtlasTexture" id=239]
+atlas = ExtResource( 14 )
+region = Rect2( 400, 100, 100, 100 )
+
+[sub_resource type="AtlasTexture" id=240]
+atlas = ExtResource( 14 )
+region = Rect2( 500, 100, 100, 100 )
+
+[sub_resource type="AtlasTexture" id=241]
+atlas = ExtResource( 14 )
+region = Rect2( 600, 100, 100, 100 )
+
+[sub_resource type="AtlasTexture" id=242]
+atlas = ExtResource( 14 )
+region = Rect2( 700, 100, 100, 100 )
+
+[sub_resource type="AtlasTexture" id=206]
+atlas = ExtResource( 11 )
+region = Rect2( 0, 0, 100, 80 )
+
+[sub_resource type="AtlasTexture" id=207]
+atlas = ExtResource( 11 )
+region = Rect2( 100, 0, 100, 80 )
+
+[sub_resource type="AtlasTexture" id=208]
+atlas = ExtResource( 11 )
+region = Rect2( 200, 0, 100, 80 )
+
+[sub_resource type="AtlasTexture" id=209]
+atlas = ExtResource( 11 )
+region = Rect2( 300, 0, 100, 80 )
+
+[sub_resource type="AtlasTexture" id=210]
+atlas = ExtResource( 11 )
+region = Rect2( 400, 0, 100, 80 )
+
+[sub_resource type="AtlasTexture" id=211]
+atlas = ExtResource( 11 )
+region = Rect2( 500, 0, 100, 80 )
+
+[sub_resource type="AtlasTexture" id=212]
+atlas = ExtResource( 11 )
+region = Rect2( 600, 0, 100, 80 )
+
+[sub_resource type="AtlasTexture" id=213]
+atlas = ExtResource( 11 )
+region = Rect2( 700, 0, 100, 80 )
+
+[sub_resource type="AtlasTexture" id=214]
+atlas = ExtResource( 11 )
+region = Rect2( 0, 400, 100, 80 )
+
+[sub_resource type="AtlasTexture" id=215]
+atlas = ExtResource( 11 )
+region = Rect2( 100, 400, 100, 80 )
+
+[sub_resource type="AtlasTexture" id=98]
+atlas = ExtResource( 1 )
+region = Rect2( 256, 0, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=99]
+atlas = ExtResource( 1 )
+region = Rect2( 320, 0, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=100]
+atlas = ExtResource( 1 )
+region = Rect2( 384, 0, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=189]
+atlas = ExtResource( 10 )
+region = Rect2( 0, 36, 150, 67 )
+
+[sub_resource type="AtlasTexture" id=268]
+atlas = ExtResource( 16 )
+region = Rect2( 0, 11, 176, 165 )
+
+[sub_resource type="AtlasTexture" id=269]
+atlas = ExtResource( 16 )
+region = Rect2( 194, 11, 176, 165 )
+
+[sub_resource type="AtlasTexture" id=270]
+atlas = ExtResource( 16 )
+region = Rect2( 388, 11, 176, 165 )
+
+[sub_resource type="AtlasTexture" id=271]
+atlas = ExtResource( 16 )
+region = Rect2( 582, 11, 176, 165 )
+
+[sub_resource type="AtlasTexture" id=272]
+atlas = ExtResource( 16 )
+region = Rect2( 776, 11, 176, 165 )
+
+[sub_resource type="AtlasTexture" id=273]
+atlas = ExtResource( 16 )
+region = Rect2( 970, 11, 176, 165 )
+
+[sub_resource type="AtlasTexture" id=274]
+atlas = ExtResource( 16 )
+region = Rect2( 1164, 11, 176, 165 )
+
+[sub_resource type="AtlasTexture" id=275]
+atlas = ExtResource( 16 )
+region = Rect2( 1358, 11, 176, 165 )
+
+[sub_resource type="AtlasTexture" id=90]
+atlas = ExtResource( 7 )
+region = Rect2( 0, 92, 74, 67 )
+
+[sub_resource type="AtlasTexture" id=91]
+atlas = ExtResource( 7 )
+region = Rect2( 74, 92, 74, 67 )
+
+[sub_resource type="AtlasTexture" id=92]
+atlas = ExtResource( 7 )
+region = Rect2( 148, 92, 74, 67 )
+
+[sub_resource type="AtlasTexture" id=93]
+atlas = ExtResource( 7 )
+region = Rect2( 222, 92, 74, 67 )
+
+[sub_resource type="AtlasTexture" id=94]
+atlas = ExtResource( 7 )
+region = Rect2( 296, 92, 74, 67 )
+
+[sub_resource type="AtlasTexture" id=95]
+atlas = ExtResource( 7 )
+region = Rect2( 370, 92, 74, 67 )
+
+[sub_resource type="AtlasTexture" id=101]
+atlas = ExtResource( 1 )
+region = Rect2( 0, 0, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=102]
+atlas = ExtResource( 1 )
+region = Rect2( 64, 0, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=103]
+atlas = ExtResource( 1 )
+region = Rect2( 128, 0, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=104]
+atlas = ExtResource( 1 )
+region = Rect2( 192, 0, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=105]
+atlas = ExtResource( 1 )
+region = Rect2( 256, 0, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=106]
+atlas = ExtResource( 1 )
+region = Rect2( 320, 0, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=107]
+atlas = ExtResource( 1 )
+region = Rect2( 384, 0, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=190]
+atlas = ExtResource( 10 )
+region = Rect2( 450, 36, 150, 67 )
+
+[sub_resource type="AtlasTexture" id=193]
+atlas = ExtResource( 10 )
+region = Rect2( 300, 36, 150, 67 )
+
+[sub_resource type="AtlasTexture" id=192]
+atlas = ExtResource( 10 )
+region = Rect2( 150, 36, 150, 67 )
+
+[sub_resource type="AtlasTexture" id=191]
+atlas = ExtResource( 10 )
+region = Rect2( 0, 36, 150, 67 )
+
+[sub_resource type="AtlasTexture" id=243]
+atlas = ExtResource( 16 )
+region = Rect2( 192, 0, 192, 176 )
+
+[sub_resource type="AtlasTexture" id=244]
+atlas = ExtResource( 16 )
+region = Rect2( 384, 0, 192, 176 )
+
+[sub_resource type="AtlasTexture" id=245]
+atlas = ExtResource( 16 )
+region = Rect2( 576, 0, 192, 176 )
+
+[sub_resource type="AtlasTexture" id=246]
+atlas = ExtResource( 16 )
+region = Rect2( 768, 0, 192, 176 )
+
+[sub_resource type="AtlasTexture" id=247]
+atlas = ExtResource( 16 )
+region = Rect2( 960, 0, 192, 176 )
+
+[sub_resource type="StreamTexture" id=82]
+load_path = "res://.import/hell-beast-breath.png-5d0eb58b26b9c6738a90fdbbf5314ad4.stex"
+
+[sub_resource type="AtlasTexture" id=68]
+atlas = SubResource( 82 )
+region = Rect2( 0, 0, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=69]
+atlas = SubResource( 82 )
+region = Rect2( 64, 0, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=70]
+atlas = SubResource( 82 )
+region = Rect2( 128, 0, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=71]
+atlas = SubResource( 82 )
+region = Rect2( 192, 0, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=108]
+atlas = ExtResource( 4 )
+region = Rect2( 0, 0, 64, 80 )
+
+[sub_resource type="AtlasTexture" id=109]
+atlas = ExtResource( 4 )
+region = Rect2( 64, 0, 64, 80 )
+
+[sub_resource type="AtlasTexture" id=110]
+atlas = ExtResource( 4 )
+region = Rect2( 128, 0, 64, 80 )
+
+[sub_resource type="AtlasTexture" id=111]
+atlas = ExtResource( 4 )
+region = Rect2( 192, 0, 64, 80 )
+
+[sub_resource type="AtlasTexture" id=112]
+atlas = ExtResource( 4 )
+region = Rect2( 64, 0, 64, 80 )
+
+[sub_resource type="AtlasTexture" id=113]
+atlas = ExtResource( 4 )
+region = Rect2( 0, 0, 64, 80 )
+
+[sub_resource type="AtlasTexture" id=194]
+atlas = ExtResource( 12 )
+region = Rect2( 450, 35, 150, 67 )
+
+[sub_resource type="AtlasTexture" id=195]
+atlas = ExtResource( 12 )
+region = Rect2( 300, 35, 150, 67 )
+
+[sub_resource type="AtlasTexture" id=196]
+atlas = ExtResource( 12 )
+region = Rect2( 0, 35, 150, 67 )
+
+[sub_resource type="AtlasTexture" id=197]
+atlas = ExtResource( 12 )
+region = Rect2( 150, 35, 150, 67 )
+
+[sub_resource type="AtlasTexture" id=256]
+atlas = ExtResource( 13 )
+region = Rect2( 0, 0, 160, 144 )
+
+[sub_resource type="AtlasTexture" id=257]
+atlas = ExtResource( 13 )
+region = Rect2( 160, 0, 160, 144 )
+
+[sub_resource type="AtlasTexture" id=258]
+atlas = ExtResource( 13 )
+region = Rect2( 320, 0, 160, 144 )
+
+[sub_resource type="AtlasTexture" id=259]
+atlas = ExtResource( 13 )
+region = Rect2( 480, 0, 160, 144 )
+
+[sub_resource type="AtlasTexture" id=260]
+atlas = ExtResource( 13 )
+region = Rect2( 640, 0, 160, 144 )
+
+[sub_resource type="AtlasTexture" id=261]
+atlas = ExtResource( 13 )
+region = Rect2( 800, 0, 160, 144 )
+
+[sub_resource type="StreamTexture" id=83]
+load_path = "res://.import/hell-beast-idle.png-0417da9fc22d3e32414c9948370fc56a.stex"
+
+[sub_resource type="AtlasTexture" id=72]
+atlas = SubResource( 83 )
+region = Rect2( 0, 0, 55, 67 )
+
+[sub_resource type="AtlasTexture" id=73]
+atlas = SubResource( 83 )
+region = Rect2( 55, 0, 55, 67 )
+
+[sub_resource type="AtlasTexture" id=74]
+atlas = SubResource( 83 )
+region = Rect2( 110, 0, 55, 67 )
+
+[sub_resource type="AtlasTexture" id=75]
+atlas = SubResource( 83 )
+region = Rect2( 165, 0, 55, 67 )
+
+[sub_resource type="AtlasTexture" id=76]
+atlas = SubResource( 83 )
+region = Rect2( 220, 0, 55, 67 )
+
+[sub_resource type="AtlasTexture" id=77]
+atlas = SubResource( 83 )
+region = Rect2( 275, 0, 55, 67 )
+
+[sub_resource type="AtlasTexture" id=114]
+atlas = ExtResource( 6 )
+region = Rect2( 0, 0, 64, 67 )
+
+[sub_resource type="AtlasTexture" id=115]
+atlas = ExtResource( 6 )
+region = Rect2( 64, 0, 64, 67 )
+
+[sub_resource type="AtlasTexture" id=116]
+atlas = ExtResource( 6 )
+region = Rect2( 128, 0, 64, 67 )
+
+[sub_resource type="AtlasTexture" id=117]
+atlas = ExtResource( 6 )
+region = Rect2( 192, 0, 64, 67 )
+
+[sub_resource type="AtlasTexture" id=118]
+atlas = ExtResource( 6 )
+region = Rect2( 256, 0, 64, 67 )
+
+[sub_resource type="AtlasTexture" id=119]
+atlas = ExtResource( 6 )
+region = Rect2( 320, 0, 64, 67 )
+
+[sub_resource type="AtlasTexture" id=120]
+atlas = ExtResource( 6 )
+region = Rect2( 384, 0, 64, 67 )
+
+[sub_resource type="AtlasTexture" id=198]
+atlas = ExtResource( 8 )
+region = Rect2( 0, 35, 150, 67 )
+
+[sub_resource type="AtlasTexture" id=199]
+atlas = ExtResource( 8 )
+region = Rect2( 150, 35, 150, 67 )
+
+[sub_resource type="AtlasTexture" id=200]
+atlas = ExtResource( 8 )
+region = Rect2( 300, 35, 150, 67 )
+
+[sub_resource type="AtlasTexture" id=201]
+atlas = ExtResource( 8 )
+region = Rect2( 450, 35, 150, 67 )
+
+[sub_resource type="AtlasTexture" id=121]
+atlas = ExtResource( 5 )
+region = Rect2( 0, 0, 64, 48 )
+
+[sub_resource type="AtlasTexture" id=122]
+atlas = ExtResource( 5 )
+region = Rect2( 64, 0, 64, 48 )
+
+[sub_resource type="AtlasTexture" id=123]
+atlas = ExtResource( 5 )
+region = Rect2( 128, 0, 64, 48 )
+
+[sub_resource type="AtlasTexture" id=124]
+atlas = ExtResource( 5 )
+region = Rect2( 192, 0, 64, 48 )
+
+[sub_resource type="AtlasTexture" id=125]
+atlas = ExtResource( 5 )
+region = Rect2( 256, 0, 64, 48 )
+
+[sub_resource type="AtlasTexture" id=126]
+atlas = ExtResource( 5 )
+region = Rect2( 320, 0, 64, 48 )
+
+[sub_resource type="AtlasTexture" id=262]
+atlas = ExtResource( 13 )
+region = Rect2( 0, 0, 160, 144 )
+
+[sub_resource type="AtlasTexture" id=263]
+atlas = ExtResource( 13 )
+region = Rect2( 160, 0, 160, 144 )
+
+[sub_resource type="AtlasTexture" id=264]
+atlas = ExtResource( 13 )
+region = Rect2( 320, 0, 160, 144 )
+
+[sub_resource type="AtlasTexture" id=265]
+atlas = ExtResource( 13 )
+region = Rect2( 480, 0, 160, 144 )
+
+[sub_resource type="AtlasTexture" id=266]
+atlas = ExtResource( 13 )
+region = Rect2( 640, 0, 160, 144 )
+
+[sub_resource type="AtlasTexture" id=267]
+atlas = ExtResource( 13 )
+region = Rect2( 800, 0, 160, 144 )
+
+[sub_resource type="AtlasTexture" id=78]
+atlas = SubResource( 83 )
+region = Rect2( 165, 0, 55, 67 )
+
+[sub_resource type="AtlasTexture" id=79]
+atlas = SubResource( 83 )
+region = Rect2( 220, 0, 55, 67 )
+
+[sub_resource type="AtlasTexture" id=80]
+atlas = SubResource( 83 )
+region = Rect2( 275, 0, 55, 67 )
+
+[sub_resource type="AtlasTexture" id=205]
+atlas = ExtResource( 9 )
+region = Rect2( 450, 35, 150, 67 )
+
+[sub_resource type="AtlasTexture" id=204]
+atlas = ExtResource( 9 )
+region = Rect2( 300, 35, 150, 67 )
+
+[sub_resource type="AtlasTexture" id=203]
+atlas = ExtResource( 9 )
+region = Rect2( 150, 35, 150, 67 )
+
+[sub_resource type="AtlasTexture" id=202]
+atlas = ExtResource( 9 )
+region = Rect2( 0, 35, 150, 67 )
+
+[sub_resource type="SpriteFrames" id=276]
+animations = [ {
+"frames": [ SubResource( 216 ), SubResource( 217 ), SubResource( 218 ), SubResource( 219 ), SubResource( 220 ), SubResource( 221 ), SubResource( 222 ), SubResource( 223 ), SubResource( 224 ), SubResource( 225 ), SubResource( 226 ) ],
+"loop": true,
+"name": "Attack_Boss_demon",
+"speed": 10.0
+}, {
+"frames": [ SubResource( 227 ), SubResource( 228 ), SubResource( 229 ), SubResource( 230 ), SubResource( 231 ), SubResource( 232 ), SubResource( 233 ), SubResource( 234 ), SubResource( 235 ), SubResource( 236 ), SubResource( 237 ), SubResource( 238 ), SubResource( 239 ), SubResource( 240 ), SubResource( 241 ), SubResource( 242 ) ],
+"loop": true,
+"name": "Dead_Boss_demon",
+"speed": 15.0
+}, {
+"frames": [ SubResource( 206 ), SubResource( 207 ), SubResource( 208 ), SubResource( 209 ), SubResource( 210 ), SubResource( 211 ), SubResource( 212 ), SubResource( 213 ), SubResource( 214 ), SubResource( 215 ) ],
+"loop": true,
+"name": "Dead_demon",
+"speed": 10.0
+}, {
+"frames": [ SubResource( 98 ), SubResource( 99 ), SubResource( 100 ) ],
+"loop": true,
+"name": "Dead_ghost",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 189 ) ],
+"loop": true,
+"name": "Dead_skeleton",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 268 ), SubResource( 269 ), SubResource( 270 ), SubResource( 271 ), SubResource( 272 ), SubResource( 273 ), SubResource( 274 ), SubResource( 275 ), SubResource( 275 ) ],
+"loop": true,
+"name": "Death_Boss_demon",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 90 ), SubResource( 91 ), SubResource( 92 ), SubResource( 91 ), SubResource( 92 ), SubResource( 93 ), SubResource( 94 ), SubResource( 95 ), SubResource( 94 ), SubResource( 95 ) ],
+"loop": true,
+"name": "Death_demon",
+"speed": 10.0
+}, {
+"frames": [ SubResource( 101 ), SubResource( 102 ), SubResource( 103 ), SubResource( 104 ), SubResource( 105 ), SubResource( 106 ), SubResource( 107 ) ],
+"loop": true,
+"name": "Death_ghost",
+"speed": 15.0
+}, {
+"frames": [ SubResource( 190 ), SubResource( 193 ), SubResource( 192 ), SubResource( 191 ) ],
+"loop": true,
+"name": "Death_skeleton",
+"speed": 15.0
+}, {
+"frames": [ SubResource( 243 ), SubResource( 244 ), SubResource( 245 ), SubResource( 246 ), SubResource( 247 ) ],
+"loop": true,
+"name": "Hit_Boss_demon",
+"speed": 10.0
+}, {
+"frames": [ SubResource( 68 ), SubResource( 69 ), SubResource( 70 ), SubResource( 71 ) ],
+"loop": true,
+"name": "Hit_demon",
+"speed": 10.0
+}, {
+"frames": [ SubResource( 108 ), SubResource( 109 ), SubResource( 110 ), SubResource( 111 ), SubResource( 112 ), SubResource( 113 ) ],
+"loop": true,
+"name": "Hit_ghost",
+"speed": 15.0
+}, {
+"frames": [ SubResource( 194 ), SubResource( 195 ), SubResource( 196 ), SubResource( 197 ) ],
+"loop": true,
+"name": "Hit_skeleton",
+"speed": 10.0
+}, {
+"frames": [ SubResource( 256 ), SubResource( 257 ), SubResource( 258 ), SubResource( 259 ), SubResource( 260 ), SubResource( 261 ) ],
+"loop": true,
+"name": "Idle_Boss_demon",
+"speed": 10.0
+}, {
+"frames": [ SubResource( 72 ), SubResource( 73 ), SubResource( 74 ), SubResource( 75 ), SubResource( 76 ), SubResource( 77 ) ],
+"loop": true,
+"name": "Idle_demon",
+"speed": 10.0
+}, {
+"frames": [ SubResource( 114 ), SubResource( 115 ), SubResource( 116 ), SubResource( 117 ), SubResource( 118 ), SubResource( 119 ), SubResource( 120 ) ],
+"loop": true,
+"name": "Idle_ghost",
+"speed": 10.0
+}, {
+"frames": [ SubResource( 198 ), SubResource( 199 ), SubResource( 200 ), SubResource( 201 ) ],
+"loop": true,
+"name": "Idle_skeleton",
+"speed": 10.0
+}, {
+"frames": [ SubResource( 121 ), SubResource( 122 ), SubResource( 123 ), SubResource( 124 ), SubResource( 125 ), SubResource( 126 ) ],
+"loop": true,
+"name": "Spawn_ghost",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 262 ), SubResource( 263 ), SubResource( 264 ), SubResource( 265 ), SubResource( 266 ), SubResource( 267 ) ],
+"loop": true,
+"name": "Walk_Boss_demon",
+"speed": 15.0
+}, {
+"frames": [ SubResource( 78 ), SubResource( 79 ), SubResource( 80 ) ],
+"loop": true,
+"name": "Walk_demon",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 205 ), SubResource( 204 ), SubResource( 203 ), SubResource( 202 ) ],
+"loop": true,
+"name": "Walk_skeleton",
+"speed": 10.0
+} ]
+
+[sub_resource type="Animation" id=291]
+resource_name = "Attack_Boss_demon"
+tracks/0/type = "value"
+tracks/0/path = NodePath("AnimatedSprite:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ "Attack_Boss_demon" ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("AnimatedSprite:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -50, 10 ) ]
+}
+
+[sub_resource type="Animation" id=292]
+resource_name = "Dead_Boss_demon"
+tracks/0/type = "value"
+tracks/0/path = NodePath("AnimatedSprite:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ "Dead_Boss_demon" ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("AnimatedSprite:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -70, 110 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Health:rect_position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -120, 0 ) ]
+}
+
+[sub_resource type="Animation" id=286]
+resource_name = "Dead_demon"
+tracks/0/type = "value"
+tracks/0/path = NodePath("AnimatedSprite:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ "Dead_demon" ]
+}
+
+[sub_resource type="Animation" id=281]
+resource_name = "Dead_ghost"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("AnimatedSprite:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ "Dead_ghost" ]
+}
+
+[sub_resource type="Animation" id=277]
+resource_name = "Dead_skeleton"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("AnimatedSprite:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ "Dead_skeleton" ]
+}
+
+[sub_resource type="Animation" id=293]
+resource_name = "Death_Boss_demon"
+tracks/0/type = "value"
+tracks/0/path = NodePath("AnimatedSprite:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ "Death_Boss_demon" ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("AnimatedSprite:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -50, 30 ) ]
+}
+
+[sub_resource type="Animation" id=287]
+resource_name = "Death_demon"
+tracks/0/type = "value"
+tracks/0/path = NodePath("AnimatedSprite:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ "Death_demon" ]
+}
+
+[sub_resource type="Animation" id=282]
+resource_name = "Death_ghost"
+tracks/0/type = "value"
+tracks/0/path = NodePath("AnimatedSprite:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ "Death_ghost" ]
+}
+
+[sub_resource type="Animation" id=278]
+resource_name = "Death_skeleton"
+tracks/0/type = "value"
+tracks/0/path = NodePath("AnimatedSprite:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ "Death_skeleton" ]
+}
+
+[sub_resource type="Animation" id=294]
+resource_name = "Hit_Boss_demon"
+tracks/0/type = "value"
+tracks/0/path = NodePath("AnimatedSprite:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ "Hit_Boss_demon" ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("AnimatedSprite:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -30, 10 ) ]
+}
+
+[sub_resource type="Animation" id=288]
+resource_name = "Hit_demon"
+tracks/0/type = "value"
+tracks/0/path = NodePath("AnimatedSprite:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ "Hit_demon" ]
+}
+
+[sub_resource type="Animation" id=283]
+resource_name = "Hit_ghost"
+tracks/0/type = "value"
+tracks/0/path = NodePath("AnimatedSprite:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ "Hit_ghost" ]
+}
+
+[sub_resource type="Animation" id=279]
+resource_name = "Hit_skeleton"
+tracks/0/type = "value"
+tracks/0/path = NodePath("AnimatedSprite:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ "Hit_skeleton" ]
+}
+
+[sub_resource type="Animation" id=295]
+resource_name = "Idle_Boss_demon"
+tracks/0/type = "value"
+tracks/0/path = NodePath("AnimatedSprite:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ "Idle_Boss_demon" ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("AnimatedSprite:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 70 ) ]
+}
+
+[sub_resource type="Animation" id=289]
+resource_name = "Idle_demon"
+tracks/0/type = "value"
+tracks/0/path = NodePath("AnimatedSprite:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ "Idle_demon" ]
+}
+
+[sub_resource type="Animation" id=284]
+resource_name = "Idle_ghost"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("AnimatedSprite:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ "Idle_ghost" ]
+}
+
+[sub_resource type="Animation" id=1]
+resource_name = "Idle_skeleton"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("AnimatedSprite:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ "Idle_skeleton" ]
+}
+
+[sub_resource type="Animation" id=285]
+resource_name = "Spawn_ghost"
+length = 2.0
+step = 0.2
+tracks/0/type = "value"
+tracks/0/path = NodePath("AnimatedSprite:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ "Spawn_ghost" ]
+}
+
+[sub_resource type="Animation" id=296]
+resource_name = "Walk_Boss_demon"
+tracks/0/type = "value"
+tracks/0/path = NodePath("AnimatedSprite:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ "Walk_Boss_demon" ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("AnimatedSprite:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 70 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Health:rect_position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -100, -50 ) ]
+}
+
+[sub_resource type="Animation" id=290]
+resource_name = "Walk_demon"
+tracks/0/type = "value"
+tracks/0/path = NodePath("AnimatedSprite:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ "Walk_demon" ]
+}
+
+[sub_resource type="Animation" id=280]
+resource_name = "Walk_skeleton"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("AnimatedSprite:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ "Walk_skeleton" ]
+}
+
+[node name="Enemy" type="Position2D"]
+script = ExtResource( 2 )
+
+[node name="Attack_boss" type="Timer" parent="."]
+wait_time = 3.0
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( -70, 110 )
+scale = Vector2( 2.53475, 2.49848 )
+frames = SubResource( 276 )
+animation = "Attack_Boss_demon"
+frame = 3
+playing = true
+
+[node name="Health" parent="." instance=ExtResource( 3 )]
+margin_left = -120.0
+margin_right = -20.0
+margin_bottom = 40.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/Attack_Boss_demon = SubResource( 291 )
+anims/Dead_Boss_demon = SubResource( 292 )
+anims/Dead_demon = SubResource( 286 )
+anims/Dead_ghost = SubResource( 281 )
+anims/Dead_skeleton = SubResource( 277 )
+anims/Death_Boss_demon = SubResource( 293 )
+anims/Death_demon = SubResource( 287 )
+anims/Death_ghost = SubResource( 282 )
+anims/Death_skeleton = SubResource( 278 )
+anims/Hit_Boss_demon = SubResource( 294 )
+anims/Hit_demon = SubResource( 288 )
+anims/Hit_ghost = SubResource( 283 )
+anims/Hit_skeleton = SubResource( 279 )
+anims/Idle_Boss_demon = SubResource( 295 )
+anims/Idle_demon = SubResource( 289 )
+anims/Idle_ghost = SubResource( 284 )
+anims/Idle_skeleton = SubResource( 1 )
+anims/Spawn_ghost = SubResource( 285 )
+anims/Walk_Boss_demon = SubResource( 296 )
+anims/Walk_demon = SubResource( 290 )
+anims/Walk_skeleton = SubResource( 280 )
+
+[connection signal="timeout" from="Attack_boss" to="." method="_on_Attack_boss_timeout"]
+[connection signal="animation_finished" from="AnimatedSprite" to="." method="_on_AnimatedSprite_animation_finished"]
